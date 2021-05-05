@@ -2,16 +2,13 @@ plugin: aws_ec2
 regions:
   - us-east-1
 filters:
-  instance-state-name: running
   tag:KubernetesCluster:
     - ###
-strict_permissions: False
-hostnames:
-  - tag:Name
+  instance-state-name: running
+compose:
+  ansible_host: private_ip_address
 keyed_groups:
 - prefix: tag
   key: tags['KubernetesCluster']
-compose:
-  ansible_host: private_ip_address
 # Can use IAM role in future to avoid IAM users and static passwords
 #iam_role_arn: "asdfas"
