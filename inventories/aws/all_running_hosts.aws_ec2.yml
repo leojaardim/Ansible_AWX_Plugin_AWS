@@ -4,7 +4,7 @@ regions:
 filters:
   instance-state-name: running
   tag:KubernetesCluster:
-    - zcc01.k8s.local
+    - ###
 strict_permissions: False
 hostnames:
   - tag:Name
