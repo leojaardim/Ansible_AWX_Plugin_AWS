@@ -3,7 +3,7 @@ regions:
   - us-east-1
 filters:
   tag:KubernetesCluster:
-    - XXX01.k8s.local
+    - zcc01.k8s.local
   instance-state-name: running
 compose:
   ansible_host: private_ip_address
